@@ -1,0 +1,119 @@
+.notfound {
+  background-color: #0a0a0a;
+  background-image:
+    radial-gradient(circle at center, rgba(255, 115, 0, 0.15) 0%, transparent 70%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-image:
+    radial-gradient(circle at center, rgb(255 115 0 / 6%) 0%, transparent 70%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size:
+    100% 100%,
+    40px 40px,
+    40px 40px;
+  width: 100%;
+  min-height: calc(100vh - 75px);
+  margin-top: 75px;
+  position: relative;
+}
+.max-480 {
+  max-width: 480px;
+}
+h1 {
+  font-size: 180px;
+  font-weight: 900;
+  line-height: 180px;
+  background: linear-gradient(to right, var(--orange-500), #f0b100, var(--orange-500));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  user-select: none;
+  margin-bottom: 0px !important;
+}
+.notfound-icon {
+  width: 112px;
+  height: 112px;
+  font-size: 16px;
+  color: #f97316;
+  background: #f973161a;
+  border: 1px solid #f973164d;
+}
+.notfound-icon svg {
+  width: 56px;
+  height: 56px;
+}
+h2 {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+p {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  color: var(--neutral-400);
+  margin-bottom: 32px;
+}
+/* btns */
+.btns {
+  margin-bottom: 48px;
+}
+.btns a {
+  color: #fff;
+  transition: all 0.3s;
+  padding: 16px 32px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  text-decoration: none;
+  gap: 8px;
+}
+.back-to-home {
+  background: linear-gradient(135deg, #f97316, #ea580c);
+}
+.browse-blogs {
+  border: 1px solid #333;
+  background-color: transparent;
+}
+.browse-blogs:hover {
+  color: #f97316;
+  background: #f973161a;
+  border-color: #f97316;
+}
+.back-to-home:hover {
+  transform: translateY(-2px);
+}
+
+.may-found {
+  width: 100%;
+  padding-top: 32px;
+  border-top: 1px solid #a1a1a142;
+}
+.may-found p {
+  margin-bottom: 16px !important;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--neutral-500);
+}
+.links a {
+  text-decoration: none;
+  color: var(--orange-500);
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.links a:hover {
+  text-decoration: underline;
+  color: #ff8904;
+}
+.links span {
+  width: 2px;
+  height: 2px;
+  background-color: var(--neutral-400);
+  border-radius: 50%;
+}

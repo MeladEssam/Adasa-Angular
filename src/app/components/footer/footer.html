@@ -1,0 +1,119 @@
+<footer>
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="site-info">
+          <div class="logo d-flex align-items-center">
+            <div class="icon d-flex justify-content-center align-items-center rounded-4 shadow">
+              ع
+            </div>
+            <span class="site-name">{{ siteInfo.name }}</span>
+          </div>
+          <p class="site-desc">
+            {{ siteInfo.description }}
+          </p>
+          <div class="social-links d-flex align-items-center gap-2">
+            <a
+              [href]="siteInfo.social.twitter"
+              target="_blank"
+              class="d-flex justify-content-center align-items-center rounded-3"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+            <a
+              [href]="siteInfo.social.github"
+              target="_blank"
+              class="d-flex justify-content-center align-items-center rounded-3"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a
+              [href]="siteInfo.social.linkedin"
+              target="_blank"
+              class="d-flex justify-content-center align-items-center rounded-3"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a
+              [href]="siteInfo.social.youtube"
+              target="_blank"
+              class="d-flex justify-content-center align-items-center rounded-3"
+            >
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="discover">
+          <h3 class="d-flex align-items-center gap-2"><span></span>استكشف</h3>
+          <ul>
+            <li>
+              <a routerLink="/" class="d-flex align-items-center gap-2 text-decoration-none"
+                ><i class="fa-solid fa-angle-left"></i>الرئيسية</a
+              >
+            </li>
+            <li>
+              <a routerLink="/blog" class="d-flex align-items-center gap-2 text-decoration-none"
+                ><i class="fa-solid fa-angle-left"></i>المدونة</a
+              >
+            </li>
+            <li>
+              <a routerLink="/about" class="d-flex align-items-center gap-2 text-decoration-none"
+                ><i class="fa-solid fa-angle-left"></i>من نحن</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="categories">
+          <h3 class="d-flex align-items-center gap-2"><span></span>التصنيفات</h3>
+          <ul>
+            <li>
+              <a routerLink="/blog" class="d-flex align-items-center gap-2 text-decoration-none"
+                ><i class="fa-solid fa-angle-left"></i>إضاءة</a
+              >
+            </li>
+            <li>
+              <a routerLink="/blog" class="d-flex align-items-center gap-2 text-decoration-none"
+                ><i class="fa-solid fa-angle-left"></i>بورتريه</a
+              >
+            </li>
+            <li>
+              <a routerLink="/blog" class="d-flex align-items-center gap-2 text-decoration-none"
+                ><i class="fa-solid fa-angle-left"></i>مناظر طبيعية
+              </a>
+            </li>
+            <li>
+              <a routerLink="/blog" class="d-flex align-items-center gap-2 text-decoration-none"
+                ><i class="fa-solid fa-angle-left"></i> تقنيات
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="subscribtion">
+          <h3 class="d-flex align-items-center gap-2"><span></span>ابقى على اطلاع</h3>
+          <p>اشترك للحصول على أحدث المقالات والتحديثات.</p>
+          <input
+            class="w-100 rounded-3 mb-3"
+            placeholder="أدخل بريدك الإلكتروني"
+            type="email"
+            name="email"
+          />
+          <button class="w-100 rounded-pill">اشترك</button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="rights-policies d-flex flex-column flex-md-row justify-content-between align-items-center flex-wrap gap-3"
+    >
+      <p class="mb-0">© 2026 عدسة. صنع بكل <i class="fa-solid fa-heart"></i>جميع الحقوق محفوظة.</p>
+      <div class="d-flex gap-3 flex-wrap justify-content-center">
+        <a class="text-decoration-none">سياسة الخصوصية</a>
+        <a class="text-decoration-none">شروط الخدمة</a>
+      </div>
+    </div>
+  </div>
+</footer>

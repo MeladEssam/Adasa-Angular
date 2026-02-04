@@ -1,0 +1,121 @@
+.hero {
+  background-color: #0a0a0a;
+  background-image:
+    radial-gradient(circle at center, rgba(255, 115, 0, 0.15) 0%, transparent 70%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-image:
+    radial-gradient(circle at center, rgb(255 115 0 / 6%) 0%, transparent 70%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size:
+    100% 100%,
+    40px 40px,
+    40px 40px;
+  width: 100%;
+  padding-block: 64px;
+  margin-top: 75px;
+  position: relative;
+}
+.max-880 {
+  max-width: 880px;
+}
+.section-label {
+  color: var(--orange-500);
+  background: #f973161a;
+  border: 1px solid #f973164d;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+.hero h1 {
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 24px;
+}
+.hero h1 span {
+  color: #fa9e1e;
+}
+.hero p {
+  margin-bottom: 40px;
+  font-size: 20px;
+  line-height: 33px;
+  font-weight: 400;
+  color: var(--neutral-400);
+}
+.hero-btns {
+  margin-bottom: 64px;
+}
+.hero-btns a {
+  color: #fff;
+  transition: all 0.3s;
+  padding: 16px 32px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  text-decoration: none;
+  gap: 8px;
+}
+.hero .discover {
+  background: linear-gradient(135deg, #f97316, #ea580c);
+}
+.hero .more {
+  border: 1px solid #333;
+  background-color: transparent;
+}
+.hero .more:hover {
+  color: #f97316;
+  background: #f973161a;
+  border-color: #f97316;
+}
+.hero .discover:hover {
+  transform: translateY(-2px);
+}
+.hero .discover svg {
+  transition: all 0.3s;
+}
+.hero .discover:hover svg {
+  transform: translateX(-2px);
+}
+.hero-stats .state-card {
+  border: 1px solid #a1a1a142;
+  background-color: #141414;
+  border-radius: 20px;
+  padding: 20px 20px;
+  transition: all 0.3s;
+}
+.hero-stats .state-icon {
+  font-size: 30px;
+  color: #ff6900;
+  display: flex;
+  justify-content: center;
+}
+.hero-stats .state-icon svg {
+  display: block;
+}
+.hero-stats .state-num {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #c1741a;
+}
+.hero-stats .state-type {
+  font-size: 14px;
+  color: var(--neutral-400);
+}
+
+@media screen and (max-width: 991px) {
+  .hero h1 {
+    font-size: 48px;
+    line-height: 48px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .hero h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}

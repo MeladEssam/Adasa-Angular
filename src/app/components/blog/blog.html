@@ -1,0 +1,75 @@
+<main>
+  <section class="blog-hero d-flex justify-content-center align-items-center">
+    <div class="container h-100 d-flex justify-content-center align-items-center">
+      <div class="text-center">
+        <div class="section-label d-inline-flex rounded-pill gap-2 px-3 py-2">مدونتنا</div>
+        <h1 class="text-white">استكشف <span>مقالاتنا</span></h1>
+        <p>اكتشف الدروس والرؤى وأفضل الممارسات للتطوير الحديث</p>
+      </div>
+    </div>
+  </section>
+  <section class="blog-actions">
+    <div class="container">
+      <div class="row justify-content-between align-items-center g-3">
+        <div class="col-md-5 col-lg-3">
+          <div class="search">
+            <input type="text" placeholder="ابحث فى المقالات..." class="w-100 rounded-3" />
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="blog-btns d-flex justify-content-center gap-2 flex-wrap">
+            <!-- category btns -->
+            @for (category of categoryList; track $index) {
+              <button
+                [class.active]="$index == selctedIndex"
+                (click)="filterPosts(category)"
+                class="blog-btn rounded-3"
+              >
+                {{ category }}
+              </button>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blog-articles">
+    <div class="container">
+      <div class="section-header d-flex justify-content-between align-items-center">
+        <div class="right-info">
+          <p class="mb-0">
+            عرض <strong class="text-white"> {{ postsList.length }} </strong> مقالات
+            @if (selctedIndex != 0) {
+              <span>{{ categoryList[selctedIndex] }}</span>
+            }
+          </p>
+        </div>
+        <div class="left-actions">
+          <button [class.active]="isGridView" (click)="changeView(true)" class="icon-btn">
+            <i class="fa-solid fa-grip"></i>
+          </button>
+          <button [class.active]="!isGridView" (click)="changeView(false)" class="icon-btn">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      @if (isGridView) {
+        <div class="row g-3">
+          <!-- Here For Loop -->
+          @for (post of postsList; track $index) {
+            <div class="col-md-6 col-lg-4">
+              <app-article-card [post]="post"></app-article-card>
+            </div>
+          }
+        </div>
+      } @else {
+        @for (post of postsList; track $index) {
+          <app-selected-article [isInBlog]="true" [post]="post"></app-selected-article>
+        }
+      }
+    </div>
+  </section>
+</main>

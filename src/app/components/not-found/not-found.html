@@ -1,0 +1,50 @@
+<main>
+  <section class="notfound d-flex justify-content-center align-items-center">
+    <div class="container h-100 d-flex justify-content-center align-items-center">
+      <div class="max-480 text-center d-flex flex-column align-items-center">
+        <h1>404</h1>
+        <div class="notfound-icon rounded-circle d-flex justify-content-center align-items-center">
+          <svg
+            class="w-14 h-14 text-orange-500"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            ></path>
+          </svg>
+        </div>
+        <h2>عفواً! الصفحة غير موجودة</h2>
+        <p>الصفحة التي تبحث عنها غير موجودة أو تم نقلها. دعنا نعيدك إلى المسار الصحيح.</p>
+        <div class="btns d-flex justify-content-center gap-3">
+          <a
+            class="back-to-home d-flex align-items-center justify-content-center rounded-pill"
+            routerLink="/"
+          >
+            <i class="fa-regular fa-house"></i><span>الذهاب للرئيسية</span>
+          </a>
+          <a
+            class="browse-blogs d-flex align-items-center justify-content-center rounded-pill"
+            routerLink="/blog"
+          >
+            <i class="fa-solid fa-newspaper"></i><span>تصفح المقالات</span>
+          </a>
+        </div>
+        <div class="may-found">
+          <p>قد تجد هذه مفيدة:</p>
+          <div class="links d-flex justify-content-center align-items-center gap-3">
+            <a routerLink="/blog">المدونة</a>
+            <span class="d-block"></span>
+            <a routerLink="/about">من نحن</a>
+            <span class="d-block"></span>
+            <a routerLink="/">الرئيسية</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

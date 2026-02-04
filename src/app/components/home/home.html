@@ -1,0 +1,190 @@
+<main>
+  <section class="hero d-flex justify-content-center align-items-center">
+    <div class="container h-100 d-flex justify-content-center align-items-center">
+      <div class="max-672 text-center">
+        <div class="section-label d-inline-flex rounded-pill gap-2 px-3 py-2">
+          مرحباً بك في عدسة
+        </div>
+        <h1 class="text-white">
+          اكتشف <span>فن</span> <br />
+          التصوير الفوتوغرافي
+        </h1>
+        <p>انغمس في أسرار المحترفين ونصائح عملية لتطوير مهاراتك في التصوير.</p>
+        <div class="hero-btns flex-column flex-md-row d-flex justify-content-center gap-3">
+          <a
+            class="discover d-flex align-items-center justify-content-center rounded-pill"
+            routerLink="/blog"
+          >
+            <span>استكشف المقالات</span> <i class="fa-solid fa-arrow-left"></i>
+          </a>
+          <a
+            class="more d-flex align-items-center justify-content-center rounded-pill"
+            routerLink="/about"
+          >
+            <i class="fa-solid fa-circle-info"></i><span>اعرف المزيد</span>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="row g-3">
+            <div class="col-6 col-md-3">
+              <div class="state-card">
+                <div class="state-icon">
+                  <i class="fa-solid fa-newspaper"></i>
+                </div>
+                <div class="state-num">+50</div>
+                <div class="state-type">مقالة</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="state-card">
+                <div class="state-icon">
+                  <i class="fa-solid fa-users"></i>
+                </div>
+                <div class="state-num">+10ألف</div>
+                <div class="state-type">قارئ</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="state-card">
+                <div class="state-icon">
+                  <i class="fa-solid fa-folder-open"></i>
+                </div>
+                <div class="state-num">4</div>
+                <div class="state-type">تصنيفات</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="state-card">
+                <div class="state-icon">
+                  <i class="fa-solid fa-pen-nib"></i>
+                </div>
+                <div class="state-num">6</div>
+                <div class="state-type">كاتب</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="selected-articles">
+    <div class="container">
+      <div
+        class="selected-articles-header d-flex gap-3 flex-column flex-md-row align-items-md-end justify-content-md-between"
+      >
+        <div class="info">
+          <div class="section-label mb-3 d-inline-flex rounded-pill gap-2 px-3 py-2">مميز</div>
+          <h2>مقالات مختارة</h2>
+          <p class="mb-0">محتوى منتقى لبدء رحلة تعلمك</p>
+        </div>
+        <a routerLink="/blog" class="rounded-3">عرض الكل<i class="fa-solid fa-angle-left"></i></a>
+      </div>
+
+      <!-- Loop Here -->
+
+      @for (post of postsList; track $index) {
+        @if (post.featured == true) {
+          <app-selected-article [post]="post"></app-selected-article>
+        }
+      }
+    </div>
+  </section>
+  <section id="categories">
+    <div class="container">
+      <div class="categories-header text-center">
+        <div class="section-label mb-3 d-inline-flex rounded-pill gap-2 px-3 py-2">التصنيفات</div>
+        <h2 class="sec-title">استكشف حسب الموضوع</h2>
+        <p class="sec-sub-title">اعثر على محتوى مصمم حسب اهتماماتك</p>
+      </div>
+      <div class="row g-4">
+        <!-- For Loop Here -->
+        @for (category of categoryList; track $index) {
+          <div class="col-6 col-md-3">
+            <app-category-card [category]="category"></app-category-card>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+  <section id="latest-articles">
+    <div class="container">
+      <div
+        class="latest-articles-header d-flex gap-3 flex-column flex-md-row align-items-md-end justify-content-md-between"
+      >
+        <div class="info">
+          <div class="section-label mb-3 d-inline-flex rounded-pill gap-2 px-3 py-2">الأحدث</div>
+          <h2>أحدث المقالات</h2>
+          <p class="mb-0">محتوى جديد طازج من المطبعة</p>
+        </div>
+        <a routerLink="/blog" class="rounded-3"
+          >عرض جميع المقالات <i class="fa-solid fa-arrow-left"></i
+        ></a>
+      </div>
+      <div class="row g-3">
+        <!-- Here For Loop -->
+        @for (latestPost of latestPostList; track $index) {
+          <div class="col-md-6 col-lg-4">
+            <app-article-card [post]="latestPost"></app-article-card>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+  <section id="subscribe" class="position-relative">
+    <div class="subscribe-layer position-absolute"></div>
+    <div class="container position-relative">
+      <div class="subscribe-content mx-auto rounded-4">
+        <div
+          class="subscribe-icon d-flex justify-content-center align-items-center rounded-4 mx-auto mb-4"
+        >
+          <i class="fa-regular fa-envelope"></i>
+        </div>
+        <h2 class="text-center text-white mb-3">
+          اشترك في <span class="text-warning">نشرتنا الإخبارية</span>
+        </h2>
+        <p class="text-center">
+          احصل على نصائح التصوير الحصرية ودروس جديدة مباشرة في بريدك الإلكتروني
+        </p>
+        <div class="subscribe-now mb-4">
+          <form action="">
+            <div class="row g-3 justify-content-center align-items-center">
+              <div class="col-md-5">
+                <div>
+                  <input class="w-100 rounded-4" type="email" placeholder="أدخل بريدك الإلكتروني" />
+                </div>
+              </div>
+              <div class="col-md-4 col-lg-3">
+                <div class="inner">
+                  <button type="submit" class="w-100 text-white rounded-4">اشترك الآن</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="subscribe-footer d-flex align-items-center justify-content-center flex-wrap">
+          <div class="info d-flex align-items-center gap-3">
+            <div class="avatars">
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=32&h=32&fit=crop&crop=face"
+                alt="avatar"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=32&h=32&fit=crop&crop=face"
+                alt="avatar"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=32&h=32&fit=crop&crop=face"
+                alt="avatar"
+              />
+            </div>
+            <p class="mb-0">انضم لـ <span class="subscribers-count">+10,000</span> مصور</p>
+          </div>
+          <span class="d-none d-md-block dotspan"></span>
+          <p class="mb-0">بدون إزعاج</p>
+          <span class="dotspan d-none d-md-block"></span>
+          <p class="mb-0">إلغاء الاشتراك في أي وقت</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

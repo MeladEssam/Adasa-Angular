@@ -1,0 +1,74 @@
+.category-card {
+  background: #161616;
+  border: 1px solid #262626;
+  transition: all 0.3s;
+  position: relative;
+  cursor: pointer;
+}
+.category-card:hover {
+  transform: translateY(-4px);
+}
+.category-icon {
+  color: var(--orange-500);
+  background-color: #f973161a;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #f973164d;
+  font-size: 20px;
+  position: relative;
+  z-index: 3;
+  transition: all 0.3s;
+}
+.category-info .category-name {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #fff;
+  position: relative;
+  z-index: 3;
+}
+.category-info .category-count {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--neutral-500);
+  position: relative;
+  z-index: 3;
+  transition: all 0.3s;
+}
+.hover-layer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, var(--orange-500), #f0b100);
+  opacity: 0;
+  z-index: 1;
+  transition: all 0.3s;
+}
+.hover-arrow-icon {
+  height: 30px;
+  width: 30px;
+  color: white;
+  opacity: 0;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  position: relative;
+  z-index: 3;
+  margin-top: 15px;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 10px;
+}
+.category-card:hover .hover-layer {
+  opacity: 1;
+}
+.category-card:hover .hover-arrow-icon {
+  opacity: 1;
+}
+.category-card:hover .category-name,
+.category-card:hover .category-count,
+.category-card:hover .category-icon {
+  color: #fff !important;
+}
+.category-card:hover .category-icon {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: transparent;
+}

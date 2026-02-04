@@ -1,0 +1,145 @@
+footer {
+  padding-top: 64px;
+  background-color: #0a0a0a;
+  border-top: 1px solid rgb(38, 38, 38);
+}
+.logo {
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.icon {
+  width: 44px;
+  height: 44px;
+  background-color: var(--orange-500);
+  color: #fff;
+  line-height: 28px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  background: linear-gradient(to right, var(--orange-500), var(--orange-600));
+}
+.icon:hover {
+  transform: scale(1.05);
+}
+.site-name {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #fff;
+}
+footer p {
+  font-size: 14px;
+  line-height: 23px;
+  font-weight: 400;
+  color: var(--neutral-500);
+  margin-bottom: 24px;
+}
+.social-links a {
+  background-color: rgb(22, 22, 22);
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgb(38, 38, 38);
+  color: var(--neutral-500);
+  transition: all 0.4s;
+}
+.social-links a:hover {
+  background: linear-gradient(to right, var(--orange-500), var(--orange-600));
+  color: #fff;
+  transform: scale(1.1);
+}
+
+footer h3 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 24px;
+}
+footer h3 span {
+  display: block;
+  width: 32px;
+  height: 2px;
+  background: linear-gradient(to right, var(--orange-500), #f0b100);
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul li {
+  margin-bottom: 20px;
+}
+ul li:last-child {
+  margin-bottom: 0px;
+}
+ul a {
+  color: var(--neutral-500);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  transition: all 0.3s;
+}
+ul a svg {
+  opacity: 0;
+  transition: all 0.3s;
+}
+ul a:hover {
+  color: var(--orange-500);
+  transform: translate(-16px);
+}
+ul a:hover svg {
+  opacity: 1;
+}
+footer input {
+  background-color: #0a0a0a;
+  border: 2px solid #262626;
+  padding: 12px 16px;
+  outline: none;
+  transition: all 0.3s;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+footer input::placeholder {
+  color: var(--neutral-500);
+}
+footer input:focus {
+  border-color: #ff69006b;
+  box-shadow: 0px 0px 0px 1px var(--orange-500);
+}
+footer button {
+  background: linear-gradient(to right, var(--orange-500), var(--orange-600));
+  border: none;
+  padding: 16px 32px;
+  line-height: 24px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+  transition: all 0.3s;
+}
+footer button:hover {
+  transform: translateY(-2px);
+}
+.rights-policies {
+  padding-block: 24px;
+  border-top: 1px solid rgb(38, 38, 38);
+  margin-top: 64px;
+}
+.rights-policies svg {
+  color: var(--orange-500);
+}
+.rights-policies p,
+.rights-policies a {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #525252;
+}
+.rights-policies a {
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.rights-policies a:hover {
+  color: var(--orange-500);
+}

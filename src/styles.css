@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  font-family: 'Tajawal', sans-serif;
+}
+:root {
+  --orange-600: #f54a00;
+  --orange-500: #ff6900;
+  --orange-400: #ff8904;
+  --neutral-400: #a1a1a1;
+  --neutral-500: #737373;
+}
