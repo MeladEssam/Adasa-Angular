@@ -16,6 +16,7 @@
   min-height: calc(100vh - 75px);
   margin-top: 75px;
   position: relative;
+  padding-block: 64px;
 }
 .max-672 {
   max-width: 672px;
