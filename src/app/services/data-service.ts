@@ -617,4 +617,7 @@ export class DataService {
     filteredPostsList = this.posts.filter((post) => post.category == categoryName);
     return filteredPostsList;
   }
+  getPostBySlug(slug: string): Post | undefined {
+    return this.posts.find((post) => post.slug === slug);
+  }
 }

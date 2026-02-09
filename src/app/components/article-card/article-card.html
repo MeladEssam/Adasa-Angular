@@ -1,4 +1,4 @@
-<div class="article-card h-100 rounded-4 overflow-hidden">
+<div [routerLink]="['/blog', post.slug]" class="article-card h-100 rounded-4 overflow-hidden">
   <div class="article-image overflow-hidden position-relative">
     <img [src]="post.image" [alt]="post.title" class="w-100 h-100" />
     <div class="article-badge-category position-absolute rounded-pill">{{ post.category }}</div>

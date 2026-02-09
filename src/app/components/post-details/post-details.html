@@ -1,0 +1,172 @@
+<main>
+  <section class="hero position-relative">
+    <div class="hero-image position-relative">
+      <img class="w-100 object-fit-cover" [src]="post.image" [alt]="post.title" />
+    </div>
+    <div class="overlay-layer"></div>
+
+    <div class="hero-nav position-absolute rounded-pill d-inline-flex align-items-center">
+      <a routerLink="/" class="text-decoration-none"><i class="fa-solid fa-house"></i></a>
+      <i class="fa-solid fa-angle-left"></i>
+      <a routerLink="/blog" class="text-decoration-none">المدونة</a>
+      <i class="fa-solid fa-angle-left"></i>
+      <span class="category-name"> {{ post.category }} </span>
+    </div>
+    <div class="hero-info position-absolute bottom-0 w-100">
+      <div class="max-1024 mx-auto">
+        <div class="info-header d-flex align-items-sm-center flex-column flex-sm-row gap-3">
+          <div class="category-name rounded-pill">{{ post.category }}</div>
+          <div class="reading d-flex align-items-center">
+            <div class="reading-date d-flex align-items-center gap-2">
+              <i class="fa-regular fa-calendar"></i>{{ post.date }}
+            </div>
+            <div class="reading-time d-flex align-items-center gap-2">
+              <i class="fa-regular fa-clock"></i> {{ post.readTime }}
+            </div>
+          </div>
+        </div>
+        <h1>{{ post.title }}</h1>
+        <div class="author rounded-4 p-3 d-flex align-items-center gap-3">
+          <div class="author-image">
+            <img
+              [src]="post.author.avatar"
+              [alt]="post.author.name"
+              class="w-100 h-100 rounded-circle"
+            />
+          </div>
+          <div class="author-text">
+            <p class="author-name mb-0">{{ post.author.name }}</p>
+            <p class="author-role mb-0">{{ post.author.role }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="post">
+    <div class="container d-flex flex-column-reverse flex-lg-row gap-5 align-items-lg-start">
+      <div class="post-details flex-grow-1">
+        <p class="post-excerpt">{{ post.excerpt }}</p>
+
+        <p class="post-description">
+          {{ introduction }}
+        </p>
+
+        @for (articleSection of alrticleSections; track $index) {
+          <h2 [id]="'section-' + $index" class="content-post-title d-flex align-items-center gap-3">
+            <span class="icon"><i class="fa-solid fa-camera"></i></span>
+            {{ articleSection.title }}
+          </h2>
+          <p class="content-post-desc">
+            {{ articleSection.content }}
+          </p>
+        }
+
+        <div class="post-tags p-4 rounded-4">
+          <div class="tags-header mb-3 d-flex align-items-center gap-3">
+            <div class="icon d-flex align-items-center justify-content-center rounded-3">
+              <i class="fa-solid fa-tags"></i>
+            </div>
+            <h3>الوسوم</h3>
+          </div>
+          <div class="tags-content d-flex gap-2 align-items-center flex-wrap">
+            @for (tag of post.tags; track $index) {
+              <span class="tag rounded-pill">#{{ tag }}</span>
+            }
+          </div>
+        </div>
+        <div
+          class="share d-flex flex-column flex-sm-row justify-content-sm-between gap-3 rounded-4"
+        >
+          <div class="d-flex align-items-center gap-3">
+            <div class="icon d-flex justify-content-center align-items-center rounded-3">
+              <i class="fa-solid fa-share-nodes"></i>
+            </div>
+            <h3 class="mb-0">شارك المقال</h3>
+          </div>
+          <div class="social d-flex gap-2">
+            <button class="twitter d-flex justify-content-center align-items-center rounded-3">
+              <i class="fa-brands fa-x-twitter d-block"></i>
+            </button>
+            <button class="linkedin d-flex justify-content-center align-items-center rounded-3">
+              <i class="fa-brands fa-linkedin-in d-block"></i>
+            </button>
+            <button class="whatsapp d-flex justify-content-center align-items-center rounded-3">
+              <i class="fa-brands fa-whatsapp d-block"></i>
+            </button>
+            <button class="link d-flex justify-content-center align-items-center rounded-3">
+              <i class="fa-solid fa-link d-block"></i>
+            </button>
+          </div>
+        </div>
+        <div
+          class="author-information rounded-4 d-flex flex-column flex-md-row gap-4 align-items-center align-items-md-start"
+        >
+          <img [src]="post.author.avatar" [alt]="post.author.name" />
+          <div class="text-center text-md-end">
+            <span>كاتب المقال</span>
+            <h3 class="author-name mb-0">{{ post.author.name }}</h3>
+            <p class="author-role">{{ post.author.role }}</p>
+            <p class="desc mb-0">
+              مصور محترف شغوف بمشاركة المعرفة والخبرات في عالم التصوير الفوتوغرافي.
+            </p>
+          </div>
+        </div>
+      </div>
+      <aside>
+        <div class="post-contents rounded-4">
+          <div class="heading d-flex align-items-center">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <i class="fa-solid fa-list-ul"></i>
+            </div>
+            <h3 class="mb-0">محتويات المقال</h3>
+          </div>
+          <div class="links">
+            @for (articleSection of alrticleSections; track $index) {
+              <a
+                routerLink="."
+                [fragment]="'section-' + $index"
+                class="text-decoration-none d-flex align-items-center"
+                ><span class="section-num d-flex align-items-center justify-content-center">
+                  {{ $index + 1 }}
+                </span>
+                <span> {{ articleSection.title }} </span></a
+              >
+            }
+          </div>
+        </div>
+        <div class="reading-info rounded-4">
+          <div class="row">
+            <div class="col-6">
+              <div class="reading-time h-100 rounded-3 d-flex flex-column align-items-center">
+                <div class="icon">
+                  <i class="fa-regular fa-clock"></i>
+                </div>
+                <p class="mb-0 text-center">{{ post.readTime }}</p>
+                <p class="mb-0 text-center">وقت القراء</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="reading-date h-100 rounded-3 d-flex flex-column align-items-center">
+                <div class="icon">
+                  <i class="fa-regular fa-clock"></i>
+                </div>
+                <p class="mb-0 text-center">{{ post.date }}</p>
+                <p class="mb-0 text-center">تاريخ النشر</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="browser-more d-flex flex-column align-items-center">
+          <div class="icon rounded-4 d-flex justify-content-center align-items-center">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <h3 class="text-center">لا تفوّت جديدنا</h3>
+          <p class="text-center">اشترك للحصول على أحدث المقالات</p>
+          <a routerLink="/blog" class="text-center text-decoration-none rounded-4 w-100"
+            >تصفح المزيد</a
+          >
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
