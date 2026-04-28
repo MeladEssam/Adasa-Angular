@@ -1,59 +1,41 @@
-# Assignment1
+# 📸 Adasa - Photography Blog
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.14.
+A modern photography platform built with **Angular 20**, featuring a sleek dark UI and dynamic content management.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Live Demo
+[Explore Adasa Live](https://meladessam.github.io/Adasa-Angular/)
 
-```bash
-ng serve
-```
+---
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 📄 Project Pages
 
-## Code scaffolding
+- **Home Page:** A professional landing page showcasing site statistics and a curated selection of latest and featured articles.
+- **Blog Page:** A dynamic hub where users can filter by category, and toggle between grid and list views for all articles.
+- **Article Details:** A dedicated reading space featuring a sticky table of contents and full post metadata for an immersive experience.
+- **About Us Page:** A section dedicated to the site's mission and vision, highlighting the platform's impact and reach in the photography community.
+- **404 Page:** A custom-designed error route to guide users back when a page is not found.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
+## 🛠️ Tech Stack
+- **Framework:** Angular 20 (Routing & Components)
+- **UI:** Bootstrap 5 & FontAwesome
+- **Data:** Dynamic JSON file integration
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+<p align="center">
+  <img src="./screenshots/home.png" width="45%" alt="Home Screen" />
+  <img src="./screenshots/blog.png" width="45%" alt="Blog Screen" />
+</p>
 
-## Building
+<p align="center">
+  <img src="./screenshots/details.png" width="90%" alt="Article details Screen" />
+</p>
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+<p align="center">
+  <img src="./screenshots/about.png" width="45%" alt="About Screen" />
+  <img src="./screenshots/notFound.png" width="45%" alt="Not Found Screen" />
+</p>
